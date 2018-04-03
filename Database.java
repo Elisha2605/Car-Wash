@@ -1,8 +1,7 @@
 public class Database{
 
-      private String washHistory;
-      private String numberOfwash;
 
+   private String Statistic; // customer history
 
 
 }
