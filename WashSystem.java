@@ -37,12 +37,16 @@ public class WashSystem{
    WashOption();
    
    }
-   
-   public static void WashOption(){
+      public static void WashOption(){
+      
       Scanner s = new Scanner(System.in);
+   
+   //While loop   
+      int input;
+      do{
       System.out.println("Welcome to Super Shine");
       menuPromptOption();
-      int input = s.nextInt();
+      input = s.nextInt();
       
       if(input == 1){
       menuPromptBuy();
@@ -54,7 +58,9 @@ public class WashSystem{
       else{
       System.out.println("Your balance on card ID " + card1.getID() + " is " + card1.getMoney());
       }
-      
+
+   }while ( input != 0);
+
    }
       
       //Wash car option (menuprompt1)            
@@ -90,21 +96,8 @@ public static void depositPrompt(){
    }else{
       System.out.println("Thank you for your visit, see you soon!");
    }
-  
-  
-  
-   /*String input3 = s.next();
-   switch (input3){
-      case y:
-         printReceipt();
-         break;    
-      
-      case n:
-         printReceipt();
-         System.out.println("Thank you for your visit, see you soon!");
-         break; 
-  }  */
 }
+
 public static void switchBuy(){ 
    int input = s.nextInt();
    switch (input){
@@ -120,8 +113,7 @@ public static void switchBuy(){
          card1.setMoney(card1.getMoney() - 100);
          
          System.out.println("You have now " + card1.getMoney() + " kr. left on your WashCard");
-         break;
-         
+         break;   
          
       case 3:
          System.out.println("You have purchased a Luxury option");
@@ -130,6 +122,15 @@ public static void switchBuy(){
          System.out.println("You have now " + card1.getMoney() + " kr. left on your WashCard");
          break;         
    } 
+         System.out.println("Would you like to go back to the start menu? (y/n)");
+      /*   String input4 = s.next();
+         if (input4.equals("y")){
+            menuPromptOption();
+         } else {
+              System.out.println("Thank you for your visit, see you soon!");
+           } */
+         
+         
 }
 
 public static void printReceipt(){
