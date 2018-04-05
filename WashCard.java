@@ -13,6 +13,11 @@ public class WashCard{
       this.ID = ID;
       this.money = money;
    }
+   
+   public void setMoney(double money){
+      this.money = money;
+   
+   }
 
    public String getID(){
       return ID;

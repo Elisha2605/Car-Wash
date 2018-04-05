@@ -40,6 +40,9 @@ public class Customer{
       System.out.println("Name: " + getName());
       System.out.println("Address: " + getAddress());
       System.out.println("Phone: " + getPhone());
+      System.out.println();
+      card.getBalance();
+      System.out.println("--------------------------------------------------");
    }
-   
+    
 }
